@@ -59,9 +59,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Domain\ADONetSession.cs" />
+    <Compile Include="Domain\Employee.cs" />
+    <Compile Include="Domain\EmployeeMap.cs" />
+    <Compile Include="Domain\FluentNHibernateSession.cs" />
     <Compile Include="Domain\NHibernateSession.cs" />
     <Compile Include="Domain\Patient.cs" />
     <Compile Include="Domain\PatientMap.cs" />
+    <Compile Include="Domain\SizeAwareSqlClientDriver.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

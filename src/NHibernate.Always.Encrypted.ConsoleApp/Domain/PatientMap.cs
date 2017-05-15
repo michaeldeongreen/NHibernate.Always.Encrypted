@@ -1,4 +1,5 @@
 ﻿using FluentNHibernate.Mapping;
+using NHibernate.Mapping;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,8 +12,9 @@ namespace NHibernate.Always.Encrypted.ConsoleApp.Domain
     {
         public PatientMap()
         {
+            
             Id(p => p.Id).UnsavedValue(0);
-            Map(p => p.SSN).Not.Nullable();
+            Map(p => p.SSN).CustomType("AnsiString");
             Map(p => p.FirstName).Nullable();
             Map(p => p.LastName).Nullable();
             Map(p => p.MiddleName).Nullable();
@@ -20,7 +22,7 @@ namespace NHibernate.Always.Encrypted.ConsoleApp.Domain
             Map(p => p.City).Nullable();
             Map(p => p.State).Nullable();
             Map(p => p.ZipCode).Nullable();
-            Map(p => p.BirthDate).Not.Nullable();
+            Map(p => p.BirthDate).CustomType("date");
         }
     }
 }
