@@ -1,4 +1,5 @@
-﻿using FluentNHibernate.Cfg;
+﻿using FluentNHibernate.Automapping;
+using FluentNHibernate.Cfg;
 using FluentNHibernate.Cfg.Db;
 using NHibernate.Cfg;
 using NHibernate.SqlAzure;
@@ -30,7 +31,7 @@ namespace NHibernate.Always.Encrypted.ConsoleApp.Domain
                             cfg.SetProperty(Environment.CollectionTypeFactoryClass, typeof(List<>).AssemblyQualifiedName);
                             cfg.SetProperty(Environment.PrepareSql, false.ToString());
                             cfg.SetProperty(Environment.TransactionStrategy, "NHibernate.Transaction.AdoNetTransactionFactory");
-                            cfg.SetProperty(Environment.ShowSql, "false");
+                            cfg.SetProperty(Environment.ShowSql, "true");
                         })
                         .BuildSessionFactory();
                 }

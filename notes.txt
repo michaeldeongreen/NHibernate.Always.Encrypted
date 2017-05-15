@@ -1,0 +1,4 @@
+Fluent NHibernate Bug:
+http://stackoverflow.com/questions/19059233/fluent-nhibernate-mapping-to-a-sql-server-char10-id-column
+
+If you did AnsiString, it would default to a length of 8000
