@@ -1,0 +1,7 @@
+*.user
+
+/src/.vs
+/src/packages
+/src/NHibernate.Always.Encrypted.ConsoleApp/bin
+/src/NHibernate.Always.Encrypted.ConsoleApp/obj
+/src/NHibernate.Always.Encrypted.ConsoleApp/.vs
