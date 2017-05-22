@@ -18,5 +18,6 @@ namespace NHibernate.Always.Encrypted.ConsoleApp.Domain
         public virtual string ZipCode { get; set; }
         public virtual string State { get; set; }
         public virtual DateTime BirthDate { get; set; }
+        public virtual byte[] Contract { get; set; }
     }
 }

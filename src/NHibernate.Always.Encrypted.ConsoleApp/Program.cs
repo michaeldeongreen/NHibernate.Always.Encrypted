@@ -2,6 +2,7 @@
 using NHibernate.Type;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -52,6 +53,17 @@ namespace NHibernate.Always.Encrypted.ConsoleApp
                 */
 
                 var patient = session.QueryOver<Patient>().Where(p => p.SSN == "380-55-8787").SingleOrDefault();
+                //byte[] bytes = File.ReadAllBytes(@"c:\temp\Attachments\benefits.pdf");
+                //patient.LastName = "Johansson";
+                //patient.Contract = bytes;
+
+                /*
+                using (var trans = session.BeginTransaction())
+                {
+                    session.SaveOrUpdate(patient);
+                    trans.Commit();
+                }
+                */
             }
 
             /*NHibernate*/

@@ -22,6 +22,7 @@ namespace NHibernate.Always.Encrypted.ConsoleApp.Domain
             Map(p => p.State).Nullable();
             Map(p => p.ZipCode).Nullable();
             Map(p => p.BirthDate);
+            Map(p => p.Contract).Length(int.MaxValue);
         }
     }
 }
