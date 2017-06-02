@@ -52,7 +52,7 @@ namespace NHibernate.Always.Encrypted.ConsoleApp
                 });
                 */
 
-                var patient = session.QueryOver<Patient>().Where(p => p.SSN == "380-55-8787").SingleOrDefault();
+                //var patient = session.QueryOver<Patient>().Where(p => p.SSN == "380-55-8787").SingleOrDefault();
                 //byte[] bytes = File.ReadAllBytes(@"c:\temp\Attachments\benefits.pdf");
                 //patient.LastName = "Johansson";
                 //patient.Contract = bytes;
@@ -64,6 +64,24 @@ namespace NHibernate.Always.Encrypted.ConsoleApp
                     trans.Commit();
                 }
                 */
+
+                var patient = new Patient()
+                {
+                    FirstName = "Jim",
+                    City = "Jackson",
+                    LastName = "Walsh",
+                    MiddleName = "S.",
+                    SSN = "638-65-6666",
+                    State = "WA",
+                    StreetAddress = "1101 Chase Av.",
+                    ZipCode = "85231",
+                    BirthDate = DateTime.Now
+                };
+                byte[] bytes = File.ReadAllBytes(@"c:\temp\Attachments\benefits.pdf");
+                patient.Contract = bytes;
+
+                session.SaveOrUpdate(patient);
+
             }
 
             /*NHibernate*/

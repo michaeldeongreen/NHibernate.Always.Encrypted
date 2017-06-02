@@ -20,7 +20,7 @@ namespace NHibernate.Always.Encrypted.ConsoleApp.Domain
             {
                 if (_fluentNHibernateSessionFactory == null)
                 {
-                    string connectionString = "Server=tcp:webjobber.database.windows.net,1433;Initial Catalog=employee_encrypt;Persist Security Info=False;User ID=webjobber;Password=JZJ57YYt3qu2QB7s;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;Column Encryption Setting=enabled";
+                    string connectionString = "Server=tcp:webjobber.database.windows.net,1433;Initial Catalog=employee_encrypt;Persist Security Info=False;User ID=WebJobberApplication;Password=JZJ57YYt3qu2QB7s;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;Column Encryption Setting=enabled";
                     Configuration configuration = null;
                     _fluentNHibernateSessionFactory = Fluently.Configure()
                         .Database(MsSqlConfiguration.MsSql2012.ShowSql().ConnectionString(connectionString).Driver<SqlAzureClientDriver>())
